@@ -1,7 +1,11 @@
 const http = require('http');
 const fs = require('fs');
+const _ = require('loadash');
 
 const server = http.createServer((req, res) => {
+
+    res.setHeader('Content-Type', 'text/html');
+    // Set header content type as HTML
 
     let path = './views/';
 
@@ -19,9 +23,6 @@ const server = http.createServer((req, res) => {
             res.statusCode = 404;
             break;
     } // Route pages
-
-    res.setHeader('Content-Type', 'text/html');
-    // Set header content type as HTML
 
     fs.readFile(path, (err, data) => {
         if (err) {
