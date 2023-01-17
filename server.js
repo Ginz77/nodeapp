@@ -35,4 +35,4 @@ const server = http.createServer((req, res) => {
 
 server.listen(3000, 'localhost', () => {
     console.log('Request successful');
-}); // Listen to check is request is successful
+}); // Listen to check if request is successful
