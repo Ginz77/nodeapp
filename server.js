@@ -1,6 +1,10 @@
 const http = require('http');
 const fs = require('fs');
-const _ = require('loadash');
+// Modules
+
+const port = 3000;
+const host =  'localhost';
+// Server settings
 
 const server = http.createServer((req, res) => {
 
@@ -34,6 +38,6 @@ const server = http.createServer((req, res) => {
     }); // Read the response path files
 });
 
-server.listen(3000, 'localhost', () => {
+server.listen(port, host, () => {
     console.log('Request successful');
 }); // Listen to check if request is successful
